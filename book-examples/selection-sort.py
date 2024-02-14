@@ -13,7 +13,7 @@ def selectSmaller(nums):
 
 def sortBySelection(nums):
     sortedList = []
-    for i in range(len(nums)):
+    for _ in range(len(nums)):
         smaller_index = selectSmaller(nums)
         sortedList.append(nums.pop(smaller_index))
 
