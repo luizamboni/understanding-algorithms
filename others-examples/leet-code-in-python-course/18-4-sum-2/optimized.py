@@ -13,6 +13,7 @@ def four_sum_count(a, b, c, d):
                 m[k] += 1
             else:
                 m[k] = 1
+
     for i in c:
         for j in d:
             k = str((i+j)*-1)
