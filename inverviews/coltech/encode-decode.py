@@ -33,27 +33,29 @@ def encode(input: str):
 #     encode(input1_encode)
 # )
 
-input1_decode = "a20b3c2"
 
 def decode(input: str):
     ans = ""
     
-    l = 1
-    r = len(input) - 1
+    char_index = 0
+    count_r_index = 1
+    r = len(input)
 
-    while l < r:
-        for i in range(l, r):
-            if input[i] not in "0123456789":
-                for _ in range(int(input[l: i])):
-                    ans+=input[l-1]
-                l+=i
-        l+=1
+    for i in range(1, r):
+        if input[i] in "0123456789":
 
-    for _ in range(int(input[r])):
-        ans+=input[r-1]
+            count_r_index+=1
+        else:
+            for _ in range(int(input[char_index+1: count_r_index])):
+                ans+=input[char_index]
+            char_index = i
+            count_r_index = char_index + 1
 
+    for _ in range(int(input[char_index+1: count_r_index])):
+        ans+=input[char_index]
     return ans
 
+input1_decode = "a20b3c10"
 
 print(
     decode(input1_decode)
