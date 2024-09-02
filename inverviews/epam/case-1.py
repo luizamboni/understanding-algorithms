@@ -9,8 +9,6 @@ def calc_moves(nums):
         if prev + incr >= curr + incr:
             incr = (prev + incr) - (curr) + 1
             moves+=1
-        # print(incr)
-
     return moves
 
 input1=[4,2,4,1,3,5]
