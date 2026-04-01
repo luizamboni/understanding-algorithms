@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Writer"
+  short_description: "Add minimal relevant tests for the affected area"
+  default_prompt: "Inspect the affected area, discover the correct test harness, and add the smallest relevant unit or integration tests without widening scope."

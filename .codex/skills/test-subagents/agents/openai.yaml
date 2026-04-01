@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Subagents"
+  short_description: "Spawn writer and runner test agents, then consolidate results"
+  default_prompt: "Discover the correct test command and affected area, spawn a test-writer and a test-runner in parallel, wait for both, and return one consolidated report with changed files, tests adjusted, execution result, and next steps."

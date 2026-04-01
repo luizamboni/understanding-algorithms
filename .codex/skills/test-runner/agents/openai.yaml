@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Runner"
+  short_description: "Run relevant tests and separate old failures from new ones"
+  default_prompt: "Discover the correct test command, run the relevant suite, capture failures and stack traces, and separate preexisting failures from new regressions."
